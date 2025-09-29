@@ -15,7 +15,7 @@ function isAvailable() {
     if (deserts.chessCake.amount > 0 ) {
       resolve(true);
     } else {
-      reject(false);
+      reject("Desert is not available, canceling the order...");
     }
   });
 }

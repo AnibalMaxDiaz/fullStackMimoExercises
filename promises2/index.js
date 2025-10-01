@@ -1,3 +1,5 @@
+/* This exercise was designed so that the user can complete the order only when they buy a glue stick, allowing them to buy the notebook, and the result of a successful purchase will be displayed on the screen. If one of the purchases is not completed, the error will be displayed on the screen too.*/ 
+
 const inventory = {
   glueSticks: 10,
   notebooks: 15,

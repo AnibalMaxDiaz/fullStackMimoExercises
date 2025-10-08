@@ -16,5 +16,6 @@ const sport1 = new Sport("Football");
 const sport2 = new Sport("Soccer");
 sport1.scoreValue = 6;
 sport2.scoreValue = 1;
+sport1.scoreValue = 3; // it takes the final value
 sport1.score();
 sport2.score();

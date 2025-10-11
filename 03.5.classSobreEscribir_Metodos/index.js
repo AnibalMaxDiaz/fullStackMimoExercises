@@ -13,7 +13,7 @@ class Human {
 class Wizard extends Human {
   attack(){
     this.health += 10;
-    super.attack();
+    //super.attack();  In this line we can call the parent method attack!
     this.damegeInflicted += 20;
     console.log('Abra Kadabra, the wizard is attacking! with ' + this.weapon + ' that inflicts ' + this.damegeInflicted + ' points of damage' );
   }

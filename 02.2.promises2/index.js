@@ -2,13 +2,15 @@
 
 const inventory = {
   glueSticks: 10,
-  notebooks: 15,
+  notebooks: 0,
   pencils: 0
 }
 let purchaseGlueSticks = false;
 let purchaseNotebooks = false;
-function orderGlueSticks() {
-  return new Promise((resolve, reject) => {
+
+// this is one way to create a promise
+function orderGlueSticks() {  
+  const promiseResponse = new Promise((resolve, reject) => {
     if (inventory.glueSticks > 0) {
       purchaseGlueSticks = true;
       resolve(purchaseGlueSticks);
@@ -17,7 +19,10 @@ function orderGlueSticks() {
       reject(errorMessage);
     }
   });
+  return promiseResponse;
 }
+
+// this is another way to create a promise 
 function orderNotebooks(glueSticksPurchased) {
   return new Promise((resolve, reject) => {
     if (glueSticksPurchased && inventory.notebooks > 0) {
